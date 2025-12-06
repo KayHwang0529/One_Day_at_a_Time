@@ -1,4 +1,5 @@
 To run this game, please first clone this github repo that contains all the files, art, and plugins needed to compile it. 
+(link to my project) https://github.com/KayHwang0529/One_Day_at_a_Time 
 You should then be sure to download godot on your local device as the editor is the key to running the game.
 Then launch the Godot application, which should open up the project manager as the first window. 
 In the Godot Project Manager, choose “Import” (if the project isn’t listed) or “Open” (if the project folder is present).
