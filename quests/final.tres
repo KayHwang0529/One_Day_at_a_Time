@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="BaseQuestResource" load_steps=4 format=3 uid="uid://h2acwgdp4sv6"]
+
+[ext_resource type="Script" path="res://scripts/base_quest.gd" id="1_25l3f"]
+[ext_resource type="Script" path="res://scripts/quest_step.gd" id="2_n4hri"]
+
+[sub_resource type="Resource" id="Resource_0i8on"]
+script = ExtResource("2_n4hri")
+title = "You're tired... Head to your bed to end the day!"
+completed = false
+name = ""
+
+[resource]
+resource_local_to_scene = true
+resource_name = "SurviveSchool"
+script = ExtResource("1_25l3f")
+steps = Array[ExtResource("2_n4hri")]([SubResource("Resource_0i8on")])
+id = 0
+quest_name = "Final"
+quest_description = "Relax and restart"
+quest_objective = "Head to your bed"

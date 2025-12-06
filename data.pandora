@@ -1,0 +1,139 @@
+{
+	"_entity_data": {
+		"_categories": [
+			{
+				"_category_id": "",
+				"_icon_color": "ffffff00",
+				"_id": "1",
+				"_ids_generation_class": "Items",
+				"_index": 0,
+				"_name": "items",
+				"_script_path": "res://scripts/item_entity.gd"
+			},
+			{
+				"_category_id": "",
+				"_generate_ids": true,
+				"_icon_color": "ffffff00",
+				"_id": "9",
+				"_ids_generation_class": "Quests",
+				"_index": 0,
+				"_name": "Quests"
+			},
+			{
+				"_category_id": "",
+				"_generate_ids": true,
+				"_icon_color": "ffffff00",
+				"_id": "12",
+				"_ids_generation_class": "Dialogue",
+				"_index": 0,
+				"_name": "dialogue"
+			}
+		],
+		"_entities": [
+			{
+				"_category_id": "1",
+				"_icon_color": "ffffff00",
+				"_id": "5",
+				"_index": 0,
+				"_name": "Trench Coat",
+				"_property_overrides": {
+					"description": {
+						"type": "string",
+						"value": "-50 Anxiety -20 Comfort"
+					},
+					"name": {
+						"type": "string",
+						"value": "Trench Coat"
+					},
+					"texture": {
+						"type": "resource",
+						"value": "res://assests/sprites/objects/trenchcoat.png"
+					}
+				}
+			},
+			{
+				"_category_id": "1",
+				"_icon_color": "ffffff00",
+				"_id": "8",
+				"_index": 0,
+				"_name": "Headphones",
+				"_property_overrides": {
+					"description": {
+						"type": "string",
+						"value": "+50 comfort -40 anxiety"
+					},
+					"name": {
+						"type": "string",
+						"value": "Headphones"
+					},
+					"texture": {
+						"type": "resource",
+						"value": "res://assests/sprites/objects/headphones.png"
+					}
+				}
+			},
+			{
+				"_category_id": "9",
+				"_icon_color": "ffffff00",
+				"_id": "11",
+				"_index": 0,
+				"_name": "New Entity"
+			},
+			{
+				"_category_id": "12",
+				"_icon_color": "ffffff00",
+				"_id": "15",
+				"_index": 0,
+				"_name": "quest1",
+				"_property_overrides": {
+					"dialogue resource": {
+						"type": "resource",
+						"value": "res://dialogue/dialogue.dialogue"
+					}
+				}
+			}
+		],
+		"_properties": [
+			{
+				"_category_id": "1",
+				"_default_value": "",
+				"_id": "2",
+				"_name": "name",
+				"_type": "string"
+			},
+			{
+				"_category_id": "1",
+				"_default_value": "",
+				"_id": "3",
+				"_name": "description",
+				"_type": "string"
+			},
+			{
+				"_category_id": "1",
+				"_default_value": null,
+				"_id": "7",
+				"_name": "texture",
+				"_type": "resource"
+			},
+			{
+				"_category_id": "9",
+				"_default_value": null,
+				"_id": "10",
+				"_name": "quest_resource",
+				"_type": "resource"
+			},
+			{
+				"_category_id": "12",
+				"_default_value": null,
+				"_id": "13",
+				"_name": "dialogue resource",
+				"_type": "resource"
+			}
+		]
+	},
+	"_id_generator": {
+		"_ids_by_context": {
+			"default": 15
+		}
+	}
+}

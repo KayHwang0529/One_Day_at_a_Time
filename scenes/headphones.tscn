@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dserf0tqytnug"]
+
+[ext_resource type="Texture2D" uid="uid://d0rfhodsvrb0g" path="res://assests/sprites/objects/headphones.png" id="1_h0ojh"]
+[ext_resource type="Script" path="res://scripts/headphones.gd" id="2_qy6fh"]
+
+[node name="headphones" type="Button"]
+scale = Vector2(0.2, 0.28)
+icon = ExtResource("1_h0ojh")
+flat = true
+script = ExtResource("2_qy6fh")

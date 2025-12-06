@@ -1,0 +1,25 @@
+~ start_talk_to_dad
+Dad: Good morning! It's time for school, lets get ready. 
+- What do I need to do?
+	Dad: Head to your closet to pick out your clothes. Make sure to keep your comfort level high and your anger low! => END
+- Ok...
+	Dad: See you soon. => END
+=> END
+
+~ conversation_battle
+Bully: HAHA What's up with those stupid headphones
+- Uhhhhh
+	Bullly: Is that all you can say? What's wrong with you?
+	set Status.anxiety += 10
+- ...
+	Bully: Can you not speak? What's wrong with you?
+	set Status.anger += 10
+Bully: Why do you keep stuttering, your so weird
+- Shut up!
+	Bully: I'm telling the teacher on you!
+	set Status.anxiety += 10
+- Stop!
+	Bully: Stop what? I'm just telling the truth 
+	set Status.anger += 10
+Teacher: Both of you will be sent home! Expect a call to your parents...
+=> END

@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bnm7uyc1rvgsk"]
+
+[ext_resource type="Texture2D" uid="uid://dv48f1c1lnmwq" path="res://assests/sprites/objects/School_objects.png" id="1_nu0h4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fgxs5"]
+atlas = ExtResource("1_nu0h4")
+region = Rect2(430, 156, 43, 52)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3obiy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fgxs5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y81f3"]
+size = Vector2(20, 31)
+
+[node name="Chair" type="StaticBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 2
+sprite_frames = SubResource("SpriteFrames_3obiy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, -5.5)
+shape = SubResource("RectangleShape2D_y81f3")

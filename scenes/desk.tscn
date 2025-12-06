@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://c05nsgsuujwwu"]
+
+[ext_resource type="Texture2D" uid="uid://dv48f1c1lnmwq" path="res://assests/sprites/objects/School_objects.png" id="1_h0ei0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ipr2w"]
+atlas = ExtResource("1_h0ei0")
+region = Rect2(477, 128, 53, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dgp8a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ipr2w")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w3gi4"]
+size = Vector2(31, 29)
+
+[node name="desk" type="StaticBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 2
+sprite_frames = SubResource("SpriteFrames_dgp8a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6, 3.5)
+shape = SubResource("RectangleShape2D_w3gi4")

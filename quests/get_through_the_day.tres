@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="BaseQuestResource" load_steps=8 format=3 uid="uid://b4fqqnyqo3sjm"]
+
+[ext_resource type="Script" path="res://scripts/base_quest.gd" id="1_td8m4"]
+[ext_resource type="Script" path="res://scripts/quest_step.gd" id="2_1dpub"]
+[ext_resource type="Script" path="res://scripts/item_entity.gd" id="5_pgqh5"]
+[ext_resource type="Script" path="res://scripts/queststeps/collect_item_step.gd" id="6_ljkk6"]
+
+[sub_resource type="Resource" id="Resource_it5nt"]
+script = ExtResource("5_pgqh5")
+_id = "8"
+
+[sub_resource type="Resource" id="Resource_22mkp"]
+script = ExtResource("6_ljkk6")
+item = SubResource("Resource_it5nt")
+title = "Anxiety Too High! Equp Heaphones"
+completed = false
+name = "EquipHP"
+
+[sub_resource type="Resource" id="Resource_duwls"]
+script = ExtResource("2_1dpub")
+title = "Head Home!"
+completed = false
+name = "home"
+
+[resource]
+resource_local_to_scene = true
+resource_name = "SurviveSchool"
+script = ExtResource("1_td8m4")
+steps = Array[ExtResource("2_1dpub")]([SubResource("Resource_22mkp"), SubResource("Resource_duwls")])
+id = 0
+quest_name = "Survive School"
+quest_description = "Suvive the School Day!"
+quest_objective = "Keep Stats Balanced"

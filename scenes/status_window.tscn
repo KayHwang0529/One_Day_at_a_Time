@@ -1,0 +1,114 @@
+[gd_scene load_steps=9 format=3 uid="uid://b4meakpxks23v"]
+
+[ext_resource type="Texture2D" uid="uid://bsuvuvk7ytq2d" path="res://assests/sprites/objects/Status.png" id="1_caa68"]
+[ext_resource type="Script" path="res://scripts/status_window.gd" id="1_njmh2"]
+[ext_resource type="Script" path="res://scripts/bar.gd" id="3_34xqc"]
+[ext_resource type="PackedScene" uid="uid://ctt56steilcxe" path="res://scenes/inv_ui_slot.tscn" id="4_7lwcx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_42wxv"]
+atlas = ExtResource("1_caa68")
+region = Rect2(0, 0, 233, 420)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sda16"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_42wxv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mepwr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pgpbh"]
+bg_color = Color(0.34481, 0.82, 0.3198, 1)
+
+[node name="status_window" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_njmh2")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(53.7501, 139)
+scale = Vector2(1.46137, 1.31905)
+sprite_frames = SubResource("SpriteFrames_sda16")
+
+[node name="comfort_bar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = -56.0
+offset_top = -5.0
+offset_right = 124.0
+offset_bottom = -2.0
+theme_override_styles/background = SubResource("StyleBoxFlat_mepwr")
+theme_override_styles/fill = SubResource("StyleBoxFlat_pgpbh")
+value = 10.0
+show_percentage = false
+script = ExtResource("3_34xqc")
+
+[node name="anxiety_bar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = -56.0
+offset_top = 20.0
+offset_right = 124.0
+offset_bottom = 23.0
+theme_override_styles/background = SubResource("StyleBoxFlat_mepwr")
+theme_override_styles/fill = SubResource("StyleBoxFlat_pgpbh")
+value = 10.0
+show_percentage = false
+script = ExtResource("3_34xqc")
+
+[node name="anger_bar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = -57.0
+offset_top = 45.0
+offset_right = 123.0
+offset_bottom = 48.0
+theme_override_styles/background = SubResource("StyleBoxFlat_mepwr")
+theme_override_styles/fill = SubResource("StyleBoxFlat_pgpbh")
+value = 10.0
+show_percentage = false
+script = ExtResource("3_34xqc")
+
+[node name="energy_bar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = -57.0
+offset_top = 71.0
+offset_right = 123.0
+offset_bottom = 74.0
+theme_override_styles/background = SubResource("StyleBoxFlat_mepwr")
+theme_override_styles/fill = SubResource("StyleBoxFlat_pgpbh")
+value = 10.0
+show_percentage = false
+script = ExtResource("3_34xqc")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 0
+offset_left = -47.0
+offset_top = 171.0
+offset_right = 119.0
+offset_bottom = 201.0
+scale = Vector2(1.05443, 1.04074)
+columns = 5
+
+[node name="inv_ui_slot5" parent="GridContainer" instance=ExtResource("4_7lwcx")]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+
+[node name="inv_ui_slot4" parent="GridContainer" instance=ExtResource("4_7lwcx")]
+custom_minimum_size = Vector2(30, 13)
+layout_mode = 2
+
+[node name="inv_ui_slot2" parent="GridContainer" instance=ExtResource("4_7lwcx")]
+custom_minimum_size = Vector2(30, 13)
+layout_mode = 2
+
+[node name="inv_ui_slot3" parent="GridContainer" instance=ExtResource("4_7lwcx")]
+custom_minimum_size = Vector2(30, 13)
+layout_mode = 2
+
+[node name="inv_ui_slot" parent="GridContainer" instance=ExtResource("4_7lwcx")]
+custom_minimum_size = Vector2(30, 13)
+layout_mode = 2

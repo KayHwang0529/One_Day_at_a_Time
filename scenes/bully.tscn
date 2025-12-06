@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://budhjxuael13w"]
+
+[ext_resource type="Texture2D" uid="uid://44uevbms3xob" path="res://assests/sprites/characters/bully.png" id="1_ssi7x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b0xcm"]
+atlas = ExtResource("1_ssi7x")
+region = Rect2(0, 0, 191, 351)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hdcug"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b0xcm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2qd8o"]
+radius = 21.0
+height = 102.0
+
+[node name="bully" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.35605, 0.340072)
+sprite_frames = SubResource("SpriteFrames_hdcug")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_2qd8o")

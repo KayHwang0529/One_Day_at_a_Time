@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="BaseQuestResource" load_steps=11 format=3 uid="uid://kw75cfi6tvxx"]
+
+[ext_resource type="Script" path="res://scripts/base_quest.gd" id="1_3n2qf"]
+[ext_resource type="Script" path="res://scripts/quest_step.gd" id="2_6nfrw"]
+[ext_resource type="Script" path="res://scripts/queststeps/QuestStepTalkToNPC.gd" id="3_8lk85"]
+[ext_resource type="Resource" uid="uid://chgam70qpe77b" path="res://dialogue/dialogue.dialogue" id="3_e1lsf"]
+[ext_resource type="Script" path="res://scripts/item_entity.gd" id="5_cxsqu"]
+[ext_resource type="Script" path="res://scripts/queststeps/collect_item_step.gd" id="5_o2l51"]
+
+[sub_resource type="Resource" id="Resource_4gec8"]
+script = ExtResource("3_8lk85")
+npc_dialogue_resource = ExtResource("3_e1lsf")
+title = "Talk to Dad in the Kitchen
+"
+completed = false
+name = ""
+
+[sub_resource type="Resource" id="Resource_fajsk"]
+script = ExtResource("5_cxsqu")
+_id = "5"
+
+[sub_resource type="Resource" id="Resource_5w58i"]
+script = ExtResource("5_o2l51")
+item = SubResource("Resource_fajsk")
+title = "Balance Your Stats by Equipping Clothes
+"
+completed = false
+name = ""
+
+[sub_resource type="Resource" id="Resource_fdxhf"]
+script = ExtResource("2_6nfrw")
+title = "Head to School!"
+completed = false
+name = ""
+
+[resource]
+resource_local_to_scene = true
+resource_name = "Get Ready"
+script = ExtResource("1_3n2qf")
+steps = Array[ExtResource("2_6nfrw")]([SubResource("Resource_4gec8"), SubResource("Resource_5w58i"), SubResource("Resource_fdxhf")])
+id = 0
+quest_name = "Get Ready For School"
+quest_description = "Time to Get Ready for the Day"
+quest_objective = "Get Ready for School and then head out the door!"

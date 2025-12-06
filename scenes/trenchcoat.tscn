@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://diffochb3k3ku"]
+
+[ext_resource type="Texture2D" uid="uid://dwct0oedmyse7" path="res://assests/sprites/objects/trenchcoat.png" id="1_o4yb8"]
+[ext_resource type="Script" path="res://scripts/trenchcoat.gd" id="2_4750t"]
+[ext_resource type="Script" path="res://scripts/item_entity.gd" id="3_xrd1e"]
+
+[sub_resource type="Resource" id="Resource_dt5gi"]
+script = ExtResource("3_xrd1e")
+_id = "5"
+
+[node name="trenchcoat" type="Button"]
+scale = Vector2(0.0584962, 0.0504761)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+icon = ExtResource("1_o4yb8")
+flat = true
+icon_alignment = 1
+script = ExtResource("2_4750t")
+item = SubResource("Resource_dt5gi")
